@@ -1,7 +1,5 @@
 const shall = require('child_process').exec;
 const promptout = require('prompt');
-const speedPath = 'https://github.do/https://github.com/Typejunjie/note-awesome.git';
-const defaultPath = 'https://github.com/Typejunjie/note-awesome.git';
 
 async function push() {
     await shall('git push', (err: Error, stdout: String, stderr: String) => {
