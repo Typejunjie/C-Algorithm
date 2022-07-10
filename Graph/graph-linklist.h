@@ -52,6 +52,7 @@ void createGraph(Glist &G, int *pointArr, int plength, int (*edgeArr)[2], int el
     
     linkEdge e;
     linkGnode cache;
+    int fromPoint, toPoint;
     for (int i = 0; i < plength; i++)
     {
         cache = new Gnode;
@@ -62,9 +63,22 @@ void createGraph(Glist &G, int *pointArr, int plength, int (*edgeArr)[2], int el
     G.countPoint = plength;
     for (int i = 0; i < elength; i++)
     {
-        for (int j = 0; j < G.countPoint; j++)
+        for (fromPoint = 0; fromPoint < G.countPoint; fromPoint++)
         {
-            if (edgeArr[i][0] == G.data[j]->data)
+            if (edgeArr[i][0] == G.data[fromPoint]->data)
+                break;
+        }
+        for (toPoint = 0; toPoint < G.countPoint; toPoint++)
+        {
+            if (edgeArr[i][1] == G.data[toPoint]->data)
+                break;
+        }
+        e = new Edge;
+        e->toPoint = toPoint;
+        e->nextEdge = G.data[fromPoint]->Edge;
+        G.data[fromPoint]->Edge = e;
+    }
+}/* if (edgeArr[i][0] == G.data[j]->data)
             {
                 e = new Edge;
                 e->nextEdge = NULL;
@@ -72,7 +86,4 @@ void createGraph(Glist &G, int *pointArr, int plength, int (*edgeArr)[2], int el
                 G.data[j]->Edge = e;
                 e->toPoint = edgeArr[i][1];
                 break;
-            }
-        }
-    }
-}
+            } */
