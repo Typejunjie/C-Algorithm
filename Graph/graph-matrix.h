@@ -12,6 +12,19 @@ struct Gmatrix
     int countPoint;
 };
 
+void log(Gmatrix G)
+{
+    for (int i = 0; i < G.countPoint; i++)
+    {
+        for (int j = 0; j < G.countPoint; j++)
+        {
+            cout << "[" << G.data[i][j] << "]";
+        }
+        cout << endl;
+    }
+    cout << "Log end" << endl;
+ }
+
 void initalMatrix(Gmatrix &G)
 {
     G.countPoint = 0;
@@ -37,6 +50,6 @@ void createMatrix(Gmatrix &G, int *pointArr, int plength, int (*edgeArr)[2], int
             if (edgeArr[i][1] == G.pointArr[toPoint])
                 break;
         }
-        G.data[fromPoint][toPoint] = 1;
+        G.data[toPoint][fromPoint] = 1;
     }
 }
