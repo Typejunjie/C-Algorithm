@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include <iostream>
-#include "graph-matrix.h"
+#include "algorithm-graph/transGFromLinkToMatrix.h"
 
 using namespace std;
 
 int main()
 {
+    Glist G;
+    initalLinkGraph(G);
     
 }
 /* Gmatrix G;

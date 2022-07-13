@@ -3,8 +3,8 @@
 
 /* 
 算法：将邻接表转为邻接矩阵
-时间复杂度O()
-空间复杂度O()
+时间复杂度O(max(n, e))
+空间复杂度O(1)
  */
 
 void transLinkGraph(Glist &G, Gmatrix &H)
