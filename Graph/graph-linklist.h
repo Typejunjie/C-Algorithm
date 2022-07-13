@@ -24,12 +24,12 @@ struct Glist
 };
 
 
-void initalGraph(Glist &G)
+void initalLinkGraph(Glist &G)
 {
     G.countPoint = 0;
 }
 
-void log(Glist &G)
+void logLinkGraph(Glist &G)
 {
     linkEdge cache;
     for (int i = 0; i < G.countPoint; i++)

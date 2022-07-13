@@ -12,7 +12,7 @@ struct Gmatrix
     int countPoint;
 };
 
-void log(Gmatrix G)
+void logMatrix(Gmatrix G)
 {
     for (int i = 0; i < G.countPoint; i++)
     {
