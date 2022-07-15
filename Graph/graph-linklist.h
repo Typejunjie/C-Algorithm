@@ -2,7 +2,7 @@
 #include <iostream>
 
 using namespace std;
-#define maxSize 100
+#define maxSize 50
 
 typedef struct Edge
 {
@@ -49,7 +49,6 @@ void logLinkGraph(Glist &G)
 
 void createGraph(Glist &G, int *pointArr, int plength, int (*edgeArr)[2], int elength)
 {
-    
     linkEdge e;
     linkGnode cache;
     int fromPoint, toPoint;

@@ -3,7 +3,7 @@
 
 using namespace std;
 
-#define maxSize 100
+#define maxSize 50
 
 struct Gmatrix
 {
@@ -51,5 +51,6 @@ void createMatrix(Gmatrix &G, int *pointArr, int plength, int (*edgeArr)[2], int
                 break;
         }
         G.data[toPoint][fromPoint] = 1;
+        G.data[fromPoint][toPoint] = 1;
     }
 }

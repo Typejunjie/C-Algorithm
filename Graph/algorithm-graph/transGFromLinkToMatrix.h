@@ -22,6 +22,7 @@ void transLinkGraph(Glist &G, Gmatrix &H)
         while (cache)
         {
             H.data[cache->toPoint][i] = 1;
+            cache = cache->nextEdge;
         }
     }
 }
