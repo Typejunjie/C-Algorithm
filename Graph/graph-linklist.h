@@ -8,21 +8,19 @@ typedef struct Edge
 {
     int toPoint;
     Edge *nextEdge;
-} *linkEdge;
-
+} * linkEdge;
 
 typedef struct Gnode
 {
     int data;
     Edge *Edge;
-} *linkGnode;
+} * linkGnode;
 
 struct Glist
 {
     Gnode *data[100];
     int countPoint;
 };
-
 
 void initalLinkGraph(Glist &G)
 {
@@ -44,12 +42,11 @@ void logLinkGraph(Glist &G)
         cout << endl;
     }
     cout << "Log end" << endl;
-    
 }
 
 void createGraph(Glist &G, int *pointArr, int plength, int (*edgeArr)[2], int elength)
 {
-    linkEdge e;
+    linkEdge e, lastE;
     linkGnode cache;
     int fromPoint, toPoint;
     for (int i = 0; i < plength; i++)
@@ -74,15 +71,68 @@ void createGraph(Glist &G, int *pointArr, int plength, int (*edgeArr)[2], int el
         }
         e = new Edge;
         e->toPoint = toPoint;
-        e->nextEdge = G.data[fromPoint]->Edge;
-        G.data[fromPoint]->Edge = e;
+        e->nextEdge = NULL;
+        lastE = G.data[fromPoint]->Edge;
+        if (lastE != NULL)
+        {
+            while (lastE->nextEdge != NULL)
+                lastE = lastE->nextEdge;
+            lastE->nextEdge = e;
+        }
+        else
+        {
+            G.data[fromPoint]->Edge = e;
+        }
+        e = new Edge;
+        e->toPoint = fromPoint;
+        e->nextEdge = NULL;
+        lastE = G.data[toPoint]->Edge;
+        if (lastE != NULL)
+        {
+            while (lastE->nextEdge != NULL)
+                lastE = lastE->nextEdge;
+            lastE->nextEdge = e;
+        }
+        else
+        {
+            G.data[toPoint]->Edge = e;
+        }
     }
-}/* if (edgeArr[i][0] == G.data[j]->data)
-            {
-                e = new Edge;
-                e->nextEdge = NULL;
-                e->nextEdge = G.data[j]->Edge;
-                G.data[j]->Edge = e;
-                e->toPoint = edgeArr[i][1];
-                break;
-            } */
+}
+
+// DFS //////////////////
+
+void visitedP(Glist G, int localP, int *visArr)
+{
+    cout << G.data[localP]->data;
+    visArr[localP] = 1;
+    if (G.data[localP]->Edge == NULL)
+        return;
+    linkEdge cache;
+    cache = G.data[localP]->Edge;
+    while (cache != NULL)
+    {
+        if (visArr[cache->toPoint] == 0)
+            visitedP(G, cache->toPoint, visArr);
+        cache = cache->nextEdge;
+    }
+}
+
+void DFS(Glist &G)
+{
+    int visitedPoint[50];
+    for (int i = 0; i < G.countPoint; i++)
+    {
+        visitedPoint[i] = 0;
+    }
+    visitedP(G, 0, visitedPoint);
+}
+
+// DFS //////////////////
+
+// BFS //////////////////
+
+
+
+
+// BFS //////////////////
