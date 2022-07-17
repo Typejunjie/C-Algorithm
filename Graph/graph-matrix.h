@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <iostream>
+#include "../Stack/linearStack.h"
 
 using namespace std;
 
@@ -54,3 +55,41 @@ void createMatrix(Gmatrix &G, int *pointArr, int plength, int (*edgeArr)[2], int
         G.data[fromPoint][toPoint] = 1;
     }
 }
+
+// DFS //////////////////
+
+void DFS_matrix(Gmatrix &G)
+{
+    Stack S;
+    initalStack(S);
+    int visArr[100];
+    for (int i = 0; i < G.countPoint; i++)
+    {
+        visArr[i] = 0;
+    }
+    int cache = 0;
+    int line = 0;
+    while (true)
+    {
+        if (G.data[line][cache] != 0 && visArr[line] == 0)
+        {
+            pushStack(S, cache);
+            cout << G.pointArr[cache];
+            visArr[cache] = 1;
+            cache = line;
+            line = 0;
+        }
+        else if (line >= G.countPoint){
+            cache = popStack(S);
+            if (cache == 0)
+                break;
+            line = 0;
+        }
+        else
+        {
+            line++;
+        }
+    }
+}
+
+// DFS //////////////////

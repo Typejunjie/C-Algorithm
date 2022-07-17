@@ -118,7 +118,7 @@ void visitedP(Glist G, int localP, int *visArr)
     }
 }
 
-void DFS(Glist &G)
+void DFS_linkList(Glist &G)
 {
     int visitedPoint[50];
     for (int i = 0; i < G.countPoint; i++)
@@ -132,7 +132,9 @@ void DFS(Glist &G)
 
 // BFS //////////////////
 
-
-
+void BFS_linkList(Glist &G)
+{
+    
+}
 
 // BFS //////////////////
