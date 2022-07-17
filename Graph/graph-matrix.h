@@ -24,7 +24,7 @@ void logMatrix(Gmatrix G)
         cout << endl;
     }
     cout << "Log end" << endl;
- }
+}
 
 void initalMatrix(Gmatrix &G)
 {
@@ -79,7 +79,13 @@ void DFS_matrix(Gmatrix &G)
             cache = line;
             line = 0;
         }
-        else if (line >= G.countPoint){
+        else if (line >= G.countPoint)
+        {
+            if (visArr[cache] == 0)
+            {
+                cout << G.pointArr[cache];
+                visArr[cache] = 1;
+            }
             cache = popStack(S);
             if (cache == 0)
                 break;

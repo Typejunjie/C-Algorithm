@@ -132,9 +132,42 @@ void DFS_linkList(Glist &G)
 
 // BFS //////////////////
 
+void BFSvis(Glist &G, int localP, int *visArr)
+{
+    if (visArr[localP] == 0)
+    {
+        cout << G.data[localP]->data;
+        visArr[localP] = 1;
+    }
+    linkEdge cache = G.data[localP]->Edge;
+    while (cache)
+    {
+        if (visArr[cache->toPoint] == 0)
+        {
+            cout << G.data[cache->toPoint]->data;
+        }
+        cache = cache->nextEdge;
+    }
+    cache = G.data[localP]->Edge;
+    while (cache)
+    {
+        if (visArr[cache->toPoint] == 0)
+        {
+            visArr[cache->toPoint] = 1;
+            BFSvis(G, cache->toPoint, visArr);
+        }
+        cache = cache->nextEdge;
+    }
+}
+
 void BFS_linkList(Glist &G)
 {
-    
+    int visitedPoint[50];
+    for (int i = 0; i < G.countPoint; i++)
+    {
+        visitedPoint[i] = 0;
+    }
+    BFSvis(G, 0, visitedPoint);
 }
 
 // BFS //////////////////
