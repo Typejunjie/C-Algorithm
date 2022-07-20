@@ -164,9 +164,7 @@ void BFS_linkList(Glist &G)
 {
     int visitedPoint[50];
     for (int i = 0; i < G.countPoint; i++)
-    {
         visitedPoint[i] = 0;
-    }
     BFSvis(G, 0, visitedPoint);
 }
 

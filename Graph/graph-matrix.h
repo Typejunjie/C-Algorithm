@@ -99,3 +99,38 @@ void DFS_matrix(Gmatrix &G)
 }
 
 // DFS //////////////////
+
+// BFS //////////////////
+
+void BFS_M_vis(Gmatrix &G, int localP, int *visArr)
+{
+    int cache;
+    if (visArr[localP] == 0)
+    {
+        cout << G.pointArr[localP];
+        visArr[localP] = 1;
+    }
+    for (cache = 0; cache < G.countPoint; cache++)
+    {
+        if (G.data[cache][localP] != 0 && visArr[cache] == 0)
+            cout << G.pointArr[cache];
+    }
+    for (cache = 0; cache < G.countPoint; cache++)
+    {
+        if (G.data[cache][localP] != 0 && visArr[cache] == 0)
+        {
+            visArr[cache] = 1;
+            BFS_M_vis(G, cache, visArr);
+        }
+    }
+}
+
+void BFS_matrix(Gmatrix &G)
+{
+    int visArr[100];
+    for (int i = 0; i < G.countPoint; i++)
+        visArr[i] = 0;
+    BFS_M_vis(G, 0, visArr);
+}
+
+// BFS //////////////////
