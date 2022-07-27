@@ -2,7 +2,7 @@
 
 > 如果已经安装git可以以以下方式克隆到本地
 
-    git clone https://github.com/Typejunjie/C-Algotithem.git
+    git clone https://github.com/Typejunjie/C-Algotithm.git
 
 ## 为什么要写下这些（写伪代码不好吗）
 
