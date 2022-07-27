@@ -39,6 +39,28 @@
 - [判断链表是否中心对称](https://github.com/Typejunjie/C-Algotithm/blob/main/linearList/algorithm-Link/jadgeCenterSymmetry.h)
 - [判断一个单链表是否有环](https://github.com/Typejunjie/C-Algotithm/blob/main/linearList/algorithm-Link/jadgeCircle.h)
 - [判断是否为子序列](https://github.com/Typejunjie/C-Algotithm/blob/main/linearList/algorithm-Link/jadgeSubsequence.h)
+- [合并两个有序链表](https://github.com/Typejunjie/C-Algorithm/blob/main/linearList/algorithm-Link/mergeListInReverse.h)
+- [使链表递增有序](https://github.com/Typejunjie/C-Algorithm/blob/main/linearList/algorithm-Link/orderlyList.h)
+- [递增次序输出单链表的结点](https://github.com/Typejunjie/C-Algorithm/blob/main/linearList/algorithm-Link/outputInOrder.h)
+- [将单链表就地逆置](https://github.com/Typejunjie/C-Algorithm/blob/main/linearList/algorithm-Link/reverseList.h)
+- [反向打印链表](https://github.com/Typejunjie/C-Algorithm/blob/main/linearList/algorithm-Link/reverseLog.h)
+- [将链表分为偶数与奇数两个链表](https://github.com/Typejunjie/C-Algorithm/blob/main/linearList/algorithm-Link/splitList.h)
+- [将一个单链表中奇数位置与偶数位置元素拆分为两个单链表](https://github.com/Typejunjie/C-Algorithm/blob/main/linearList/algorithm-Link/splitListInharf.h)
+- [循环找出最小结点并删除，直到为空链表再删除头结点](https://github.com/Typejunjie/C-Algorithm/blob/main/linearList/algorithm-circleList/findMinNodeAndDele.h)
+- [判断链表是否对称](https://github.com/Typejunjie/C-Algorithm/blob/main/linearList/algorithm-circleList/jadgeSymmetry.h)
+- [合并两个循环双链表](https://github.com/Typejunjie/C-Algorithm/blob/main/linearList/algorithm-circleList/mergeCircleList.h)
+
+### 串
+
+- [串的定义及BF算法](https://github.com/Typejunjie/C-Algorithm/blob/main/String/string.h)
+
+### 栈
+
+- []
+
+### 队列
+
+### 图
 
 ### 查找
 
@@ -47,6 +69,7 @@
 ### 排序
 
 - [选择排序（基于顺序存储）](https://github.com/Typejunjie/C-Algotithm/blob/main/linearList/algorithm-insertOrder/insterOrder.h)
+- [直接插入排序](https://github.com/Typejunjie/C-Algorithm/blob/main/linearList/algorithm-insertOrder/insterOrder.h)
 
 ### 写在最后
 
