@@ -66,7 +66,7 @@
 
 ### 排序
 
-- [选择排序（基于顺序存储）](https://github.com/Typejunjie/C-Algotithm/blob/main/linearList/algorithm-insertOrder/insterOrder.h)
+- [选择排序（基于顺序存储）](https://github.com/Typejunjie/C-Algorithm/blob/main/linearList/algorithm-insertOrder/insterOrder.h)
 - [直接插入排序](https://github.com/Typejunjie/C-Algorithm/blob/main/linearList/algorithm-insertOrder/insterOrder.h)
 
 ### 写在最后
