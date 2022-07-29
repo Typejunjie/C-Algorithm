@@ -50,15 +50,62 @@
 - [判断链表是否对称](https://github.com/Typejunjie/C-Algorithm/blob/main/linearList/algorithm-circleList/jadgeSymmetry.h)
 - [合并两个循环双链表](https://github.com/Typejunjie/C-Algorithm/blob/main/linearList/algorithm-circleList/mergeCircleList.h)
 
+### 树
+
+- [树的定义](https://github.com/Typejunjie/C-Algorithm/blob/main/tree/interfere.h)
+- [在已经建成的二叉树条件下线索化](https://github.com/Typejunjie/C-Algorithm/blob/main/tree/createClueTree.h)
+- [打印值为x的元素的所有祖先](https://github.com/Typejunjie/C-Algorithm/blob/main/tree/algorithm-Tree/LogXancestors.h)
+- [求树的宽度，即结点数最多的一层结点个数](https://github.com/Typejunjie/C-Algorithm/blob/main/tree/algorithm-Tree/TreeWith.h)
+- [树的层次遍历](https://github.com/Typejunjie/C-Algorithm/blob/main/tree/algorithm-Tree/arrangementLog.h)
+- [计算孩子兄弟表示法存储的森林的叶子结点数](https://github.com/Typejunjie/C-Algorithm/blob/main/tree/algorithm-Tree/countForestLeaf.h)
+- [计算一颗以孩子兄弟存储法存储的树的深度](https://github.com/Typejunjie/C-Algorithm/blob/main/tree/algorithm-Tree/countTreeDepth.h)
+- [计算双分支结点个数](https://github.com/Typejunjie/C-Algorithm/blob/main/tree/algorithm-Tree/countTwoBranch.h)
+- [计算WPL](https://github.com/Typejunjie/C-Algorithm/blob/main/tree/algorithm-Tree/countWPL.h)
+- [根据先序和中序构建二叉链表存储的二叉树](https://github.com/Typejunjie/C-Algorithm/blob/main/tree/algorithm-Tree/createTreeINPre.h)
+- [删去值为x的结点的子树](https://github.com/Typejunjie/C-Algorithm/blob/main/tree/algorithm-Tree/deleteXTreeSson.h)
+- [交换所有左右子树的值](https://github.com/Typejunjie/C-Algorithm/blob/main/tree/algorithm-Tree/exchangeLRnode.h)
+- [找到两个结点的最近公共祖先](https://github.com/Typejunjie/C-Algorithm/blob/main/tree/algorithm-Tree/findAncestors.h)
+- [找到先序遍历中第k个元素](https://github.com/Typejunjie/C-Algorithm/blob/main/tree/algorithm-Tree/findXpointInPre.h)
+- [依据层次遍历和结点的度构造孩子兄弟存储的树](https://github.com/Typejunjie/C-Algorithm/blob/main/tree/algorithm-Tree/fromArrangeAndDegreeToTree.h)
+- [由满二叉树的先序序列求出其后序序列](https://github.com/Typejunjie/C-Algorithm/blob/main/tree/algorithm-Tree/fullTreePreToPost.h)
+- [给定在中序线索二叉树的结点，找其后序遍历前驱](https://github.com/Typejunjie/C-Algorithm/blob/main/tree/algorithm-Tree/inClueTreeXInPostPrior.h)
+- [由表达式二叉树构造适当括号的中缀表达式](https://github.com/Typejunjie/C-Algorithm/blob/main/tree/algorithm-Tree/inLogMinSuffic.h)
+- [判断树的层数](https://github.com/Typejunjie/C-Algorithm/blob/main/tree/algorithm-Tree/jadgeDepth.h)
+- [判断二叉树是否为完全二叉树](https://github.com/Typejunjie/C-Algorithm/blob/main/tree/algorithm-Tree/jadgeTreeComplete.h)
+- [判断两颗树是否相似](https://github.com/Typejunjie/C-Algorithm/blob/main/tree/algorithm-Tree/jadgeTreeSimilar.h)
+- [将叶子结点从左到右链接为一个单链表](https://github.com/Typejunjie/C-Algorithm/blob/main/tree/algorithm-Tree/linkLeaf.h)
+- [非递归实现后续遍历](https://github.com/Typejunjie/C-Algorithm/blob/main/tree/algorithm-Tree/postLogTreeInNoRecursion.h)
+
 ### 串
 
 - [串的定义及BF算法](https://github.com/Typejunjie/C-Algorithm/blob/main/String/string.h)
 
 ### 栈
 
+- [链栈](https://github.com/Typejunjie/C-Algorithm/blob/main/Stack/linkStack.h)
+- [线栈](https://github.com/Typejunjie/C-Algorithm/blob/main/Stack/linearStack.h)
+- [共享栈](https://github.com/Typejunjie/C-Algorithm/blob/main/Stack/shareStack.h)
+- [括号匹配](https://github.com/Typejunjie/C-Algorithm/blob/main/Stack/algorithm-linearStack/jadgeMatching.h)
+- [算法：递归函数的非递归实现
+        { 1  ,n = 0
+Pn(x) = { 2x ,n = 1
+        { 2xPn-1(x) - 2(n - 1)Pn-2(x) ,n > 1](https://github.com/Typejunjie/C-Algorithm/blob/main/Stack/algorithm-linearStack/recursiveFun.h)
+
 ### 队列
 
+- [线性队列](https://github.com/Typejunjie/C-Algorithm/blob/main/Queue/linearQueue.h)
+
 ### 图
+
+- [邻接表存储图](https://github.com/Typejunjie/C-Algorithm/blob/main/Graph/graph-linklist.h)
+- [邻接矩阵存储图](https://github.com/Typejunjie/C-Algorithm/blob/main/Graph/graph-matrix.h)
+- [判断是否存在El路径](https://github.com/Typejunjie/C-Algorithm/blob/main/Graph/algorithm-graph/jadgeElRoute.h)
+- [判断一个图是否为树](https://github.com/Typejunjie/C-Algorithm/blob/main/Graph/algorithm-graph/jadgeTree.h)
+- [将邻接表转为邻接矩阵](https://github.com/Typejunjie/C-Algorithm/blob/main/Graph/algorithm-graph/transGFromLinkToMatrix.h)
+- [DFS-邻接表](https://github.com/Typejunjie/C-Algorithm/blob/main/Graph/graph-linklist.h)
+- [BFS-邻接表](https://github.com/Typejunjie/C-Algorithm/blob/main/Graph/graph-linklist.h)
+- [DFS-邻接矩阵](https://github.com/Typejunjie/C-Algorithm/blob/main/Graph/graph-matrix.h)
+- [BFS-邻接矩阵](https://github.com/Typejunjie/C-Algorithm/blob/main/Graph/graph-matrix.h)
 
 ### 查找
 
@@ -68,6 +115,12 @@
 
 - [选择排序（基于顺序存储）](https://github.com/Typejunjie/C-Algorithm/blob/main/linearList/algorithm-insertOrder/insterOrder.h)
 - [直接插入排序](https://github.com/Typejunjie/C-Algorithm/blob/main/linearList/algorithm-insertOrder/insterOrder.h)
+- [简单选择排序](https://github.com/Typejunjie/C-Algorithm/blob/main/sort/operate.h)
+- [快速排序](https://github.com/Typejunjie/C-Algorithm/blob/main/sort/operate.h)
+- [冒泡排序](https://github.com/Typejunjie/C-Algorithm/blob/main/sort/operate.h)
+- [希尔排序](https://github.com/Typejunjie/C-Algorithm/blob/main/sort/operate.h)
+- [折半插入排序](https://github.com/Typejunjie/C-Algorithm/blob/main/sort/operate.h)
+- [直接插入排序](https://github.com/Typejunjie/C-Algorithm/blob/main/sort/operate.h)
 
 ### 写在最后
 
