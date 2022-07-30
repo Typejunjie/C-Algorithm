@@ -1,18 +1,17 @@
 #include <stdio.h>
 #include <iostream>
-#include "graph-matrix.h"
+#include "algorithm-graph/jadgeTree.h"
 
 using namespace std;
 
 int main()
 {
-    Gmatrix G;
-    initalMatrix(G);
+    Glist G;
+    initalLinkGraph(G);
     int pointArr[] = {1, 2, 3, 4, 5};
     int edgeArr[][2] = {1, 4, 1, 3, 1, 2, 4, 5};
-    createMatrix(G, pointArr, 5, edgeArr, 4);
-    logMatrix(G);
-    BFS_matrix(G);
+    createGraph(G, pointArr, 5, edgeArr, 4);
+    bool jadge = jadgeTree(G);
 }
 /* Gmatrix G;
     initalMatrix(G);
