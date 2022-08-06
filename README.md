@@ -4,14 +4,21 @@
 
     git clone https://github.com/Typejunjie/C-Algotithm.git
 
-## 为什么要写下这些（写伪代码不好吗）
+## 如何在本地运行算法
 
-- 算法的实现需要实践的证明，伪代码写下来完全没有成就感，错了也不能印证
+### 示例
 
-- 既然选择了计算机专业岂能活在伪代码中
-- 用算法实践来表达思想，或许能给出不同的答案
+    #include "algorithm-Link/judgeCenterSymmetry.h" // 引入算法所在头文件
+    int main()
+    {
+    int Array[] = {2, 3, -2, -15, -15, -2, 3, 2};
+    linkList L;
+    creatLinkList(L, Array, 8);                     // 创建对应结构体
+    bool judge = judgeCenterSymmetry(L);            // 传入对应参数
+    cout << judge;
+    }
 
-## 目录（完善中）
+## 目录
 
 ### 线性表
 
@@ -36,7 +43,7 @@
 - [找到公共后缀起始位置](https://github.com/Typejunjie/C-Algorithm/blob/main/linearList/algorithm-Link/findPublicSuffix.h)
 - [找出两个单链表中相同的结点](https://github.com/Typejunjie/C-Algotithm/blob/main/linearList/algorithm-Link/findSimNode.h)
 - [从两个链表中抽取相同结点](https://github.com/Typejunjie/C-Algorithm/blob/main/linearList/algorithm-Link/findSimNodeFromOrder.h)
-- [判断链表是否中心对称](https://github.com/Typejunjie/C-Algorithm/blob/main/linearList/algorithm-Link/jadgeCenterSymmetry.h)
+- [判断链表是否中心对称](https://github.com/Typejunjie/C-Algorithm/blob/main/linearList/algorithm-Link/judgeCenterSymmetry.h)
 - [判断一个单链表是否有环](https://github.com/Typejunjie/C-Algorithm/blob/main/linearList/algorithm-Link/jadgeCircle.h)
 - [判断是否为子序列](https://github.com/Typejunjie/C-Algorithm/blob/main/linearList/algorithm-Link/jadgeSubsequence.h)
 - [合并两个有序链表](https://github.com/Typejunjie/C-Algorithm/blob/main/linearList/algorithm-Link/mergeListInReverse.h)
@@ -100,12 +107,12 @@ Pn(x) = { 2x ,n = 1
 - [邻接表存储图](https://github.com/Typejunjie/C-Algorithm/blob/main/Graph/graph-linklist.h)
 - [邻接矩阵存储图](https://github.com/Typejunjie/C-Algorithm/blob/main/Graph/graph-matrix.h)
 - [判断是否存在El路径](https://github.com/Typejunjie/C-Algorithm/blob/main/Graph/algorithm-graph/jadgeElRoute.h)
-- [判断一个图是否为树](https://github.com/Typejunjie/C-Algorithm/blob/main/Graph/algorithm-graph/jadgeTree.h)
 - [将邻接表转为邻接矩阵](https://github.com/Typejunjie/C-Algorithm/blob/main/Graph/algorithm-graph/transGFromLinkToMatrix.h)
 - [DFS-邻接表](https://github.com/Typejunjie/C-Algorithm/blob/main/Graph/graph-linklist.h)
 - [BFS-邻接表](https://github.com/Typejunjie/C-Algorithm/blob/main/Graph/graph-linklist.h)
 - [DFS-邻接矩阵](https://github.com/Typejunjie/C-Algorithm/blob/main/Graph/graph-matrix.h)
 - [BFS-邻接矩阵](https://github.com/Typejunjie/C-Algorithm/blob/main/Graph/graph-matrix.h)
+- [判断图是否是一颗树](https://github.com/Typejunjie/C-Algorithm/blob/main/Graph/algorithm-graph/judgeTree.h)
 
 ### 查找
 

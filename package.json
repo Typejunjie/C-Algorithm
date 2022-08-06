@@ -1,19 +1,21 @@
 {
-  "name": "c",
-  "version": "1.0.0",
-  "description": "C",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Typejunjie/C-Algotithem.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Typejunjie/C-Algotithem/issues"
-  },
-  "homepage": "https://github.com/Typejunjie/C-Algotithem#readme"
+    "name": "c",
+    "version": "1.0.0",
+    "description": "C",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "push": "node shall.ts"
+
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Typejunjie/C-Algotithem.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Typejunjie/C-Algotithem/issues"
+    },
+    "homepage": "https://github.com/Typejunjie/C-Algotithem#readme"
 }

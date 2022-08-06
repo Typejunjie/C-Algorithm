@@ -7,7 +7,7 @@
 空间复杂度O(1)
  */
 
-bool jadgeCenterSymmetry(linkList &L)
+bool judgeCenterSymmetry(linkList &L)
 {
     linkList slow, fast;
     slow = fast = L;

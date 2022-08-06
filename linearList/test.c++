@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <iostream>
-#include "algorithm-Link/jadgeCenterSymmetry.h"
+#include "algorithm-Link/judgeCenterSymmetry.h"
 
 using namespace std;
 
@@ -9,8 +9,8 @@ int main()
     int Array[] = {2, 3, -2, -15, -15, -2, 3, 2};
     linkList L;
     creatLinkList(L, Array, 8);
-    bool jadge = jadgeCenterSymmetry(L);
-    cout << jadge;
+    bool judge = judgeCenterSymmetry(L);
+    cout << judge;
 }
 /* // Initialize a linked list
     linkList L;
