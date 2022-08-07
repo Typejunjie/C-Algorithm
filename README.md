@@ -2,21 +2,25 @@
 
 > 如果已经安装git可以以以下方式克隆到本地
 
-    git clone https://github.com/Typejunjie/C-Algotithm.git
+```cmd
+git clone https://github.com/Typejunjie/C-Algotithm.git
+```
 
 ## 如何在本地运行算法
 
 ### 示例
 
-    #include "algorithm-Link/judgeCenterSymmetry.h" // 引入算法所在头文件
-    int main()
-    {
-    int Array[] = {2, 3, -2, -15, -15, -2, 3, 2};
-    linkList L;
-    creatLinkList(L, Array, 8);                     // 创建对应结构体
-    bool judge = judgeCenterSymmetry(L);            // 传入对应参数
-    cout << judge;
-    }
+```cpp
+#include "algorithm-Link/judgeCenterSymmetry.h" // 引入算法所在头文件
+int main()
+{
+int Array[] = {2, 3, -2, -15, -15, -2, 3, 2};
+linkList L;
+creatLinkList(L, Array, 8);                     // 创建对应结构体
+bool judge = judgeCenterSymmetry(L);            // 传入对应参数
+cout << judge;
+}
+```
 
 ## 目录
 
