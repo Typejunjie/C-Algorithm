@@ -117,6 +117,7 @@ Pn(x) = { 2x ,n = 1
 - [DFS-邻接矩阵](https://github.com/Typejunjie/C-Algorithm/blob/main/Graph/graph-matrix.h)
 - [BFS-邻接矩阵](https://github.com/Typejunjie/C-Algorithm/blob/main/Graph/graph-matrix.h)
 - [判断图是否是一颗树](https://github.com/Typejunjie/C-Algorithm/blob/main/Graph/algorithm-graph/judgeTree.h)
+- [判断图中两结点是否存在路径](https://github.com/Typejunjie/C-Algorithm/blob/main/Graph/algorithm-graph/judgementPath.h)
 
 ### 查找
 

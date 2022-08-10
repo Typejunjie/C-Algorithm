@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <iostream>
-#include "algorithm-graph/judgeTree.h"
+#include "algorithm-graph/judgementPath.h"
 
 using namespace std;
 
@@ -8,11 +8,11 @@ int main()
 {
     Glist G;
     initalLinkGraph(G);
-    int pointArr[] = {1, 2, 3, 4, 5};
+    int pointArr[] = {1, 2, 3, 4, 5, 6};
     int edgeArr[][2] = {1, 4, 1, 3, 1, 2, 4, 5, 5, 1};
-    createGraph(G, pointArr, 5, edgeArr, 5);
+    createGraph(G, pointArr, 6, edgeArr, 5);
     // logLinkGraph(G);
-    bool judge = judgeTree(G);
+    bool judge = judgementPath(G, 1, 6);
     cout << judge;
 }
 /* Gmatrix G;
