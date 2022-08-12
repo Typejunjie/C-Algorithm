@@ -1,19 +1,16 @@
 #include <stdio.h>
 #include <iostream>
-#include "algorithm-graph/judgementPath.h"
+#include "algorithm-graph/TopologicalSorting.h"
 
 using namespace std;
 
 int main()
 {
-    Glist G;
-    initalLinkGraph(G);
-    int pointArr[] = {1, 2, 3, 4, 5, 6};
-    int edgeArr[][2] = {1, 4, 1, 3, 1, 2, 4, 5, 5, 1};
-    createGraph(G, pointArr, 6, edgeArr, 5);
-    // logLinkGraph(G);
-    bool judge = judgementPath(G, 1, 6);
-    cout << judge;
+    directionGraph G;
+    int pointArr[] = {1, 2, 3 ,4 ,5};
+    int edgeArr[][3] = {1, 2, 2, 1, 3, 3, 1, 4, 4, 4, 5, 5};
+    createDirectionGraph(G, pointArr, 5, edgeArr, 4);
+    logDirectionGraph(G);
 }
 /* Gmatrix G;
     initalMatrix(G);
@@ -29,3 +26,12 @@ int main()
     createMatrix(G, pointArr, 5, edgeArr, 8);
     logMatrix(G);
     DFS_matrix(G); */
+
+/* Glist G;
+    initalLinkGraph(G);
+    int pointArr[] = {1, 2, 3, 4, 5, 6};
+    int edgeArr[][2] = {1, 4, 1, 3, 1, 2, 4, 5, 5, 1};
+    createGraph(G, pointArr, 6, edgeArr, 5);
+    // logLinkGraph(G);
+    bool judge = judgementPath(G, 1, 6);
+    cout << judge; */

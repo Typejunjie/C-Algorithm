@@ -102,18 +102,18 @@ void createGraph(Glist &G, int *pointArr, int plength, int (*edgeArr)[2], int el
 
 // DFS //////////////////
 
-void visitedP(Glist G, int localP, int *visArr)
+void DFSvis_linkGraph(Glist G, int localP, int *visArr)
 {
-    cout << G.data[localP]->data;
+    linkEdge cache;
     visArr[localP] = 1;
+    cout << G.data[localP]->data;
     if (G.data[localP]->Edge == NULL)
         return;
-    linkEdge cache;
     cache = G.data[localP]->Edge;
     while (cache != NULL)
     {
         if (visArr[cache->toPoint] == 0)
-            visitedP(G, cache->toPoint, visArr);
+            DFSvis_linkGraph(G, cache->toPoint, visArr);
         cache = cache->nextEdge;
     }
 }
@@ -125,14 +125,14 @@ void DFS_linkList(Glist &G)
     {
         visitedPoint[i] = 0;
     }
-    visitedP(G, 0, visitedPoint);
+    DFSvis_linkGraph(G, 0, visitedPoint);
 }
 
 // DFS //////////////////
 
 // BFS //////////////////
 
-void BFSvis(Glist &G, int localP, int *visArr)
+void BFSvis_linkGraph(Glist &G, int localP, int *visArr)
 {
     if (visArr[localP] == 0)
     {
@@ -154,7 +154,7 @@ void BFSvis(Glist &G, int localP, int *visArr)
         if (visArr[cache->toPoint] == 0)
         {
             visArr[cache->toPoint] = 1;
-            BFSvis(G, cache->toPoint, visArr);
+            BFSvis_linkGraph(G, cache->toPoint, visArr);
         }
         cache = cache->nextEdge;
     }
@@ -165,7 +165,7 @@ void BFS_linkList(Glist &G)
     int visitedPoint[50];
     for (int i = 0; i < G.countPoint; i++)
         visitedPoint[i] = 0;
-    BFSvis(G, 0, visitedPoint);
+    BFSvis_linkGraph(G, 0, visitedPoint);
 }
 
 // BFS //////////////////
