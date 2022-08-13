@@ -45,5 +45,3 @@ bool judgeTree(Glist &G)
     }
     return vis(G, 0, visitedPoint, -1);
 }
-
-

@@ -11,14 +11,16 @@ git clone https://github.com/Typejunjie/C-Algotithm.git
 ### 示例
 
 ```cpp
-#include "algorithm-Link/judgeCenterSymmetry.h" // 引入算法所在头文件
+#include "algorithm-graph/TopologicalSorting.h"              // 引入算法所在头文件
+using namespace std;
+
 int main()
 {
-int Array[] = {2, 3, -2, -15, -15, -2, 3, 2};
-linkList L;
-creatLinkList(L, Array, 8);                     // 创建对应结构体
-bool judge = judgeCenterSymmetry(L);            // 传入对应参数
-cout << judge;
+    directionGraph G;                                        // 声名结构体
+    int pointArr[] = {1, 2, 3, 4, 5};                        // 定义适当传参
+    int edgeArr[][3] = {2, 1, 2, 3, 1, 3, 4, 1, 4, 5, 4, 5};
+    createDirectionGraph(G, pointArr, 5, edgeArr, 4);        // 创建数据结构
+    topologicalSorting(G);                                   // 执行算法
 }
 ```
 
@@ -110,6 +112,7 @@ Pn(x) = { 2x ,n = 1
 
 - [邻接表存储图](https://github.com/Typejunjie/C-Algorithm/blob/main/Graph/graph-linklist.h)
 - [邻接矩阵存储图](https://github.com/Typejunjie/C-Algorithm/blob/main/Graph/graph-matrix.h)
+- [有向带权网的定义及创建（邻接矩阵存储）](https://github.com/Typejunjie/C-Algorithm/blob/main/Graph/graph-direction-weightedEdge.h)
 - [判断是否存在El路径](https://github.com/Typejunjie/C-Algorithm/blob/main/Graph/algorithm-graph/jadgeElRoute.h)
 - [将邻接表转为邻接矩阵](https://github.com/Typejunjie/C-Algorithm/blob/main/Graph/algorithm-graph/transGFromLinkToMatrix.h)
 - [DFS-邻接表](https://github.com/Typejunjie/C-Algorithm/blob/main/Graph/graph-linklist.h)
@@ -118,6 +121,7 @@ Pn(x) = { 2x ,n = 1
 - [BFS-邻接矩阵](https://github.com/Typejunjie/C-Algorithm/blob/main/Graph/graph-matrix.h)
 - [判断图是否是一颗树](https://github.com/Typejunjie/C-Algorithm/blob/main/Graph/algorithm-graph/judgeTree.h)
 - [判断图中两结点是否存在路径](https://github.com/Typejunjie/C-Algorithm/blob/main/Graph/algorithm-graph/judgementPath.h)
+- [拓扑排序](https://github.com/Typejunjie/C-Algorithm/blob/main/Graph/algorithm-graph/TopologicalSorting.h)
 
 ### 查找
 
