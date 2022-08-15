@@ -1,5 +1,15 @@
-package.jasn
 shall.ts
+Main.exe
+Main.c++
 
 # Editor directories and files
+/shall
+
+# 
+package
+
+# 忽略exe文件
 .exe
+
+# 
+/Main
