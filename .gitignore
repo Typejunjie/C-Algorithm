@@ -9,7 +9,7 @@ main.exe
 package
 
 # 忽略exe文件
-.exe
+*.exe
 
 #  8
 /Main
