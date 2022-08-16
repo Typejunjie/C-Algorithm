@@ -1,0 +1,15 @@
+shall.ts
+Main.exe
+main.exe
+
+# Editor directories and files
+/shall
+
+# 
+package
+
+# 忽略exe文件
+.exe
+
+#  8
+/Main
