@@ -1,15 +1,10 @@
 shall.ts
 Main.exe
 main.exe
+package.json
 
 # Editor directories and files
 /shall
-
-# 
-package
-
-# 忽略exe文件
+/package
 *.exe
-
-#  8
 /Main

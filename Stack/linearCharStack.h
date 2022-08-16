@@ -30,7 +30,7 @@ char popStack(Stack &S)
     if (S.top <= 0)
     {
         //cout << "栈空，无法弹出元素" << endl;
-        return 0;
+        return '0';
     }
     S.top--;
     return S.data[S.top];

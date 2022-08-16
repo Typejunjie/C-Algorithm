@@ -98,7 +98,7 @@ int main()
 - [链栈](https://github.com/Typejunjie/C-Algorithm/blob/main/Stack/linkStack.h)
 - [线栈](https://github.com/Typejunjie/C-Algorithm/blob/main/Stack/linearStack.h)
 - [共享栈](https://github.com/Typejunjie/C-Algorithm/blob/main/Stack/shareStack.h)
-- [括号匹配](https://github.com/Typejunjie/C-Algorithm/blob/main/Stack/algorithm-linearStack/jadgeMatching.h)
+- [括号匹配](https://github.com/Typejunjie/C-Algorithm/blob/main/Stack/algorithm-linearStack/judgeMatching.h)
 - [算法：递归函数的非递归实现
         { 1  ,n = 0
 Pn(x) = { 2x ,n = 1
@@ -112,7 +112,7 @@ Pn(x) = { 2x ,n = 1
 
 - [邻接表存储图](https://github.com/Typejunjie/C-Algorithm/blob/main/Graph/graph-linklist.h)
 - [邻接矩阵存储图](https://github.com/Typejunjie/C-Algorithm/blob/main/Graph/graph-matrix.h)
-- [有向带权网的定义及创建（邻接矩阵存储）](https://github.com/Typejunjie/C-Algorithm/blob/main/Graph/graph-direction-weightedEdge.h)
+- [有向带权网的定义及创建（邻接表存储）](https://github.com/Typejunjie/C-Algorithm/blob/main/Graph/graph-direction-weightedEdge.h)
 - [判断是否存在El路径](https://github.com/Typejunjie/C-Algorithm/blob/main/Graph/algorithm-graph/jadgeElRoute.h)
 - [将邻接表转为邻接矩阵](https://github.com/Typejunjie/C-Algorithm/blob/main/Graph/algorithm-graph/transGFromLinkToMatrix.h)
 - [DFS-邻接表](https://github.com/Typejunjie/C-Algorithm/blob/main/Graph/graph-linklist.h)

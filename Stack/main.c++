@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include <iostream>
-#include "algorithm-linearStack/recursiveFun.h"
+#include "algorithm-linearStack/judgeMatching.h"
 
 using namespace std;
 
 int main()
 {
-    int value = recursiveFun(3, 2);
-    cout << value;
+    char str[] = "{{{}}}}";
+    bool judge = judgeMatching(str);
+    cout << judge;
 }
