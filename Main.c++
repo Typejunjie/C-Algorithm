@@ -1,25 +1,14 @@
 #include <stdio.h>
 #include <iostream>
-#include "algorithm-multiple/reverseQueue.h"
+#include "algorithm-compound/createExpressTree.h"
 
 using namespace std;
 
-int sum(int d, int e)
-{
-    return d + e;
-};
-
 int main()
 {
-    int value = sum(3, 4);
-    printf("%d\n", value);
+    char str[] = "1 - 2 + 3 * 4";
 }
 
-/*
-int main()
-{
-
-} */
 /* Queue Q;
     Stack S;
     initalQueue(Q);

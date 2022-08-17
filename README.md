@@ -107,6 +107,7 @@ Pn(x) = { 2x ,n = 1
 ### 队列
 
 - [线性队列](https://github.com/Typejunjie/C-Algorithm/blob/main/Queue/linearQueue.h)
+- [逆置队列](https://github.com/Typejunjie/C-Algorithm/blob/main/algorithm-compound/reverseQueue.h)
 
 ### 图
 
