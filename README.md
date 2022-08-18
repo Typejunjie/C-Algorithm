@@ -103,6 +103,7 @@ int main()
         { 1  ,n = 0
 Pn(x) = { 2x ,n = 1
         { 2xPn-1(x) - 2(n - 1)Pn-2(x) ,n > 1](https://github.com/Typejunjie/C-Algorithm/blob/main/Stack/algorithm-linearStack/recursiveFun.h)
+- [算数中缀表达式转后缀表达式](https://github.com/Typejunjie/C-Algorithm/blob/main/algorithm-compound/convertsToSuffixExpress.h)
 
 ### 队列
 

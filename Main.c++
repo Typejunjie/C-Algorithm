@@ -1,12 +1,18 @@
 #include <stdio.h>
 #include <iostream>
-#include "algorithm-compound/createExpressTree.h"
+#include "algorithm-compound/convertsToSuffixExpress.h"
 
 using namespace std;
 
 int main()
 {
-    char str[] = "1 - 2 + 3 * 4";
+    char str[] = "(1-2+3)*4";
+    char newStr[10];
+    convertsToSuffixExpress(str, 10, newStr);
+    for (int i = 0; i < 7; i++)
+    {
+        cout << newStr[i];
+    }
 }
 
 /* Queue Q;
