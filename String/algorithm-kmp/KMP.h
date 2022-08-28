@@ -1,16 +1,25 @@
 #include "../char.h"
 
-// KMP算法
+void logArr(int *Arr, int length)
+{
+    for (int i = 0; i < length + 1; i++)
+    {
+        cout << '[' << Arr[i] << ']';
+    }
+    cout << "Log end" << endl;
+}
 
+// 求next数组
 void nextArr(SString &S, int *next)
 {
-    int i = 1, j = 0;
-    next[1] = 0;
+    int i = 0, j = -1;
+    next[0] = -1;
     while (i < S.length)
     {
-        if (j == 0 || S.data[i] == S.data[j])
+        if (j == -1 || S.data[i] == S.data[j])
         {
-            ++i;++j;
+            ++i;
+            ++j;
             next[i] = j;
         }
         else
@@ -18,11 +27,25 @@ void nextArr(SString &S, int *next)
     }
 }
 
-void logArr(int *Arr, int length)
+// KMP算法
+bool KPM(SString &S, SString &T)
 {
-    for (int i = 1; i < length + 1; i++)
+    int i = 0, j = 0;
+    int next[50];
+    nextArr(T, next);
+    logArr(next, 5);
+    while (i < S.length && j < T.length)
     {
-        cout << '[' << Arr[i] << ']';
+        if (j == 0 || S.data[i] == T.data[j])
+        {
+            i++;
+            j++;
+        }
+        else
+            j = next[j];
     }
-    cout << "Log end" << endl;
+    if (j >= T.length)
+        return true;
+    return false;
 }
+

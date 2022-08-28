@@ -92,6 +92,7 @@ int main()
 ### 串
 
 - [串的定义及BF算法](https://github.com/Typejunjie/C-Algorithm/blob/main/String/string.h)
+- [KMP算法](https://github.com/Typejunjie/C-Algorithm/blob/main/String/algorithm-kmp/KMP.h)
 
 ### 栈
 

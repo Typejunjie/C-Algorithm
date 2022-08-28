@@ -7,9 +7,11 @@ using namespace std;
 int main()
 {
     SString S;
-    int next[20];
-    char str[] = "ababaaaa\0";
+    SString T;
+    char str[] = "ababa\0";
+    char str_T[] = "aababbaaa\0";
     initalString(S, str);
-    nextArr(S, next);
-    logArr(next, S.length);
+    initalString(T, str_T);
+    bool judge = KPM(T, S);
+    cout << judge;
 }
