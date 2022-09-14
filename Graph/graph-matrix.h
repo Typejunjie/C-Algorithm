@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <iostream>
 #include "../Stack/linearStack.h"
+#include "../Queue/linearQueue.h"
 
 using namespace std;
 
@@ -102,35 +103,34 @@ void DFS_matrix(Gmatrix &G)
 
 // BFS //////////////////
 
-void BFS_M_vis(Gmatrix &G, int localP, int *visArr)
+void visited_BFS(int pointValue)
 {
-    int cache;
-    if (visArr[localP] == 0)
-    {
-        cout << G.pointArr[localP];
-        visArr[localP] = 1;
-    }
-    for (cache = 0; cache < G.countPoint; cache++)
-    {
-        if (G.data[cache][localP] != 0 && visArr[cache] == 0)
-            cout << G.pointArr[cache];
-    }
-    for (cache = 0; cache < G.countPoint; cache++)
-    {
-        if (G.data[cache][localP] != 0 && visArr[cache] == 0)
-        {
-            visArr[cache] = 1;
-            BFS_M_vis(G, cache, visArr);
-        }
-    }
+    cout << pointValue;
 }
 
 void BFS_matrix(Gmatrix &G)
 {
-    int visArr[100];
+    int visited[20];
     for (int i = 0; i < G.countPoint; i++)
-        visArr[i] = 0;
-    BFS_M_vis(G, 0, visArr);
+        visited[i] = 0;
+    Queue Q;
+    initalQueue(Q);
+    pushQueue(Q, 0);
+    int cache;
+    while (judgeQueueEmpty(Q) == false)
+    {
+        cache = popQueue(Q);
+        visited_BFS(G.pointArr[cache]);
+        visited[cache] = 1;
+        for (int j = 0; j < G.countPoint; j++)
+        {
+            if (G.data[cache][j] != 0 && visited[j] == 0)
+            {
+                pushQueue(Q, j);
+                visited[j] = 1;
+            }
+        }
+    }
 }
 
 // BFS //////////////////

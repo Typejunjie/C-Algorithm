@@ -1,16 +1,17 @@
 #include <stdio.h>
 #include <iostream>
-#include "algorithm-graph/TopologicalSorting.h"
+#include "graph-matrix.h"
 
 using namespace std;
 
 int main()
 {
-    directionGraph G;
+    Gmatrix G;
     int pointArr[] = {1, 2, 3, 4, 5};
-    int edgeArr[][3] = {2, 1, 2, 3, 1, 3, 4, 1, 4, 5, 4, 5};
-    createDirectionGraph(G, pointArr, 5, edgeArr, 4);
-    topologicalSorting(G);
+    int edgeArr[][2] = {1, 2, 1, 3, 3, 4, 3, 5, 1, 5};
+    createMatrix(G, pointArr, 5, edgeArr, 5);
+    logMatrix(G);
+    BFS_matrix(G);
 }
 /* Gmatrix G;
     initalMatrix(G);

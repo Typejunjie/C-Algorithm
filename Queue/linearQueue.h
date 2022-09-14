@@ -12,6 +12,13 @@ struct Queue
     int tag = 0;
 };
 
+bool judgeQueueEmpty(Queue Q)
+{
+    if (Q.front == Q.rear && Q.tag == 0)
+        return true;
+    return false;
+}
+
 void initalQueue(Queue &Q)
 {
     Q.front = 0;
