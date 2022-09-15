@@ -14,6 +14,13 @@ void initalStack(Stack &S)
     S.top = 0;
 }
 
+bool judgeStackEmpty(Stack S)
+{
+    if (S.top <= 0)
+        return true;
+    return false;
+}
+
 void pushStack(Stack &S, int value)
 {
     if (S.top >= S.volume)

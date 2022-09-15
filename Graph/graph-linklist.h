@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <iostream>
+#include "../Stack/linearStack.h"
+#include "../Queue/linearQueue.h"
 
 using namespace std;
 #define maxSize 50
@@ -132,40 +134,37 @@ void DFS_linkList(Glist &G)
 
 // BFS //////////////////
 
-void BFSvis_linkGraph(Glist &G, int localP, int *visArr)
+void BFS_visited(int pointValue)
 {
-    if (visArr[localP] == 0)
-    {
-        cout << G.data[localP]->data;
-        visArr[localP] = 1;
-    }
-    linkEdge cache = G.data[localP]->Edge;
-    while (cache)
-    {
-        if (visArr[cache->toPoint] == 0)
-        {
-            cout << G.data[cache->toPoint]->data;
-        }
-        cache = cache->nextEdge;
-    }
-    cache = G.data[localP]->Edge;
-    while (cache)
-    {
-        if (visArr[cache->toPoint] == 0)
-        {
-            visArr[cache->toPoint] = 1;
-            BFSvis_linkGraph(G, cache->toPoint, visArr);
-        }
-        cache = cache->nextEdge;
-    }
+    cout << pointValue;
 }
 
-void BFS_linkList(Glist &G)
+void BFS_linkGraph(Glist &G)
 {
-    int visitedPoint[50];
+    bool visited[20];
     for (int i = 0; i < G.countPoint; i++)
-        visitedPoint[i] = 0;
-    BFSvis_linkGraph(G, 0, visitedPoint);
+        visited[i] = false;
+    Queue Q;
+    initalQueue(Q);
+    pushQueue(Q, 0);
+    visited[0] = true;
+    int cache;
+    linkEdge cacheEdge;
+    while (judgeQueueEmpty(Q) == false)
+    {
+        cache = popQueue(Q);
+        BFS_visited(G.data[cache]->data);
+        cacheEdge = G.data[cache]->Edge;
+        while (cacheEdge)
+        {
+            if (visited[cacheEdge->toPoint] == false)
+            {
+                pushQueue(Q, cacheEdge->toPoint);
+                visited[cacheEdge->toPoint] = true;
+            }
+            cacheEdge = cacheEdge->nextEdge;
+        }
+    }
 }
 
 // BFS //////////////////

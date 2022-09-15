@@ -65,9 +65,7 @@ void DFS_matrix(Gmatrix &G)
     initalStack(S);
     int visArr[100];
     for (int i = 0; i < G.countPoint; i++)
-    {
         visArr[i] = 0;
-    }
     int cache = 0;
     int line = 0;
     while (true)

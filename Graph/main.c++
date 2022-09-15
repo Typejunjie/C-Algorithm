@@ -1,17 +1,17 @@
 #include <stdio.h>
 #include <iostream>
-#include "graph-matrix.h"
+#include "graph-linklist.h"
 
 using namespace std;
 
 int main()
 {
-    Gmatrix G;
+    Glist G;
     int pointArr[] = {1, 2, 3, 4, 5};
     int edgeArr[][2] = {1, 2, 1, 3, 3, 4, 3, 5, 1, 5};
-    createMatrix(G, pointArr, 5, edgeArr, 5);
-    logMatrix(G);
-    BFS_matrix(G);
+    createGraph(G, pointArr, 5, edgeArr, 5);
+    logLinkGraph(G);
+    BFS_linkGraph(G);
 }
 /* Gmatrix G;
     initalMatrix(G);
