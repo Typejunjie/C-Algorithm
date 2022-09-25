@@ -48,7 +48,7 @@ void logLinkGraph(Glist &G)
 
 void createGraph(Glist &G, int *pointArr, int plength, int (*edgeArr)[2], int elength)
 {
-    linkEdge e, lastE;
+    linkEdge e, lastEdge;
     linkGnode cache;
     int fromPoint, toPoint;
     for (int i = 0; i < plength; i++)
@@ -74,12 +74,12 @@ void createGraph(Glist &G, int *pointArr, int plength, int (*edgeArr)[2], int el
         e = new Edge;
         e->toPoint = toPoint;
         e->nextEdge = NULL;
-        lastE = G.data[fromPoint]->Edge;
-        if (lastE != NULL)
+        lastEdge = G.data[fromPoint]->Edge;
+        if (lastEdge != NULL)
         {
-            while (lastE->nextEdge != NULL)
-                lastE = lastE->nextEdge;
-            lastE->nextEdge = e;
+            while (lastEdge->nextEdge != NULL)
+                lastEdge = lastEdge->nextEdge;
+            lastEdge->nextEdge = e;
         }
         else
         {
@@ -88,12 +88,12 @@ void createGraph(Glist &G, int *pointArr, int plength, int (*edgeArr)[2], int el
         e = new Edge;
         e->toPoint = fromPoint;
         e->nextEdge = NULL;
-        lastE = G.data[toPoint]->Edge;
-        if (lastE != NULL)
+        lastEdge = G.data[toPoint]->Edge;
+        if (lastEdge != NULL)
         {
-            while (lastE->nextEdge != NULL)
-                lastE = lastE->nextEdge;
-            lastE->nextEdge = e;
+            while (lastEdge->nextEdge != NULL)
+                lastEdge = lastEdge->nextEdge;
+            lastEdge->nextEdge = e;
         }
         else
         {
